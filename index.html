@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Larptech - Gaming and Tech</title>
+    <!-- CSS do Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-light">
 
-    <!-- ALERTA -->
+    <!-- 1. ALERTA DE PROMOÇÃO -->
     <div class="alert alert-warning alert-dismissible fade show text-center rounded-0 mb-0" role="alert">
         <strong>Boot de inauguração!</strong> Ganhe 90% de desconto no seu setup com o cupom <strong>LARP90</strong>.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar o alerta"></button>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- 2. BARRA DE NAVEGAÇÃO (NAVBAR & DROPDOWN) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
         <div class="container">
             <a class="navbar-brand text-uppercase fw-bold text-primary" href="#">LarpTech</a>
@@ -26,19 +27,18 @@
             <div class="collapse navbar-collapse" id="menuPrincipalNavegacao">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link active" href="#">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Suporte Tecnico</a>
+                        <a class="nav-link" href="#suporte">Suporte Técnico</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Perifericos
+                            Periféricos
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Mouses gamer</a></li>
-                            <li><a class="dropdown-item" href="#">Teclados mecânicos</a></li>
+                            <li><a class="dropdown-item" href="#">Mouses Gamer</a></li>
+                            <li><a class="dropdown-item" href="#">Teclados Mecânicos</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Headsets</a></li>
                         </ul>
@@ -48,9 +48,8 @@
         </div>
     </nav>
 
-    <!-- CARROSSEL -->
+    <!-- 3. CARROSSEL DE DESTAQUES (CAROUSEL & IMAGENS) -->
     <div id="carrosselLarpTech" class="carousel slide mb-5" data-bs-ride="carousel">
-        
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carrosselLarpTech" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carrosselLarpTech" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -59,31 +58,32 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://placehold.co/1920x600/111111/0d6efd?text=Setup+Gamer+Larptech" class="d-block w-100" alt="Imagem de um setup gamer">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="fw-bold text-uppercase">Eleve seu Nivel</h2>
-                    <a href="#" class="btn btn-primary btn-lg fw-bold">Ver ofertas</a>
+                <img src="img/setup.jpg" class="d-block w-100" alt="Setup Gamer Larptech" style="max-height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-3 rounded">
+                    <h2 class="fw-bold text-uppercase text-primary">Eleve seu Nível</h2>
+                    <p class="fs-5">Os melhores periféricos para dominar qualquer partida.</p>
+                    <a href="#" class="btn btn-primary btn-lg fw-bold">Ver Ofertas</a>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="https://placehold.co/1920x600/111111/0d6efd?text=Suporte+Tecnico" class="d-block w-100" alt="Placa mãe do computador">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="fw-bold text-uppercase">PC lento? Nós Resolvemos!</h2>
-                    <p class="fs-5">Limpeza, manutençao e upgrade para o seu PC rodar Roblox sem travar.</p>
-                    <a href="#" class="btn btn-outline-light btn-lg fw-bold">Agendar Suporte</a>
+                <img src="img/manutençao.jpg" class="d-block w-100" alt="Manutenção de Computadores" style="max-height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-3 rounded">
+                    <h2 class="fw-bold text-uppercase text-primary">PC Lento? Nós Resolvemos!</h2>
+                    <p class="fs-5">Limpeza, manutenção e upgrade para o seu PC rodar tudo sem travar.</p>
+                    <a href="#suporte" class="btn btn-outline-light btn-lg fw-bold">Agendar Suporte</a>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="https://placehold.co/1920x600/111111/0d6efd?text=Perifericos+Profissionais" class="d-block w-100" alt="Teclado mecânico iluminado">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="fw-bold text-uppercase">Precisão e Conforto</h2>
-                    <p class="fs-5">Teclados mecânicos e mouses com tempo de resposta ultrarrápido.</p>
+                <img src="img/tecladomecanico.jpg" class="d-block w-100" alt="Teclado Mecânico Gamer" style="max-height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-3 rounded">
+                    <h2 class="fw-bold text-uppercase text-primary">Precisão e Conforto</h2>
+                    <p class="fs-5">Teclados mecânicos de alta durabilidade e tempo de resposta ultrarrápido.</p>
                     <a href="#" class="btn btn-primary btn-lg fw-bold">Conferir Acessórios</a>
                 </div>
             </div>
-        </div> 
+        </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carrosselLarpTech" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -95,28 +95,25 @@
         </button>
     </div>
 
-    <!-- CARDS DE PRODUTOS -->
+    <!-- 4. CARDS DE PRODUTOS (BS5 FLEX & CARDS) -->
     <div class="container my-5">
         <h2 class="text-center fw-bold text-uppercase mb-5 text-primary">Destaques da Larptech</h2>
         <div class="row g-4 justify-content-center">
             
-            <!-- Card 1 -->
             <div class="col-12 col-md-4">
-                <!-- Corrigido: class="card bg-black..." e adicionado o "=" -->
                 <div class="card bg-black text-light border-secondary h-100 d-flex flex-column shadow">
-                    <img src="https://placehold.co/400x300/222222/0d6efd?text=Mouse+Gamer" class="card-img-top" alt="Mouse gamer RGB">
+                    <img src="img/mousergb.jpg" class="card-img-top p-3" alt="Mouse Gamer RGB" style="height: 260px; object-fit: contain; background-color: #000;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">Mouse RGB Precision</h5>
-                        <p class="card-text text-muted mb-4">Sensor óptico de alta precisão para você conseguir roubar todos os ovos no roube um ovo.</p>
+                        <p class="card-text text-muted mb-4">Sensor óptico de alta precisão para conseguir roubar todos os ovos.</p>
                         <a href="#" class="btn btn-outline-primary mt-auto fw-bold">Comprar - R$ 149,90</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="col-12 col-md-4">
                 <div class="card bg-black text-light border-secondary h-100 d-flex flex-column shadow">
-                    <img src="https://placehold.co/400x300/222222/0d6efd?text=Base+Cooler" class="card-img-top" alt="Base com cooler para notebook">
+                    <img src="img/basecoller.jpg" class="card-img-top p-3" alt="Base Cooler para Notebook" style="height: 260px; object-fit: contain; background-color: #000;">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">Base Cooler Storm</h5>
                         <p class="card-text text-muted mb-4">Resfriamento máximo para o seu Acer Nitro V15 não fritar durante o Red Dead Redemption 2.</p>
@@ -124,11 +121,91 @@
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </div> <!-- Esta div fecha o container que estava aberto -->
 
-    <!-- OS SCRIPTS DEVEM FICAR AQUI, NO FINAL DO BODY -->
+            <div class="col-12 col-md-4">
+                <div class="card bg-black text-light border-secondary h-100 d-flex flex-column shadow">
+                    <img src="img/tecladomecanico.jpg" class="card-img-top" alt="Teclado Mecânico Custom" style="height: 260px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Teclado Mecânico Custom</h5>
+                        <p class="card-text text-muted mb-4">Switches de alta performance e estrutura reforçada para máxima precisão.</p>
+                        <a href="#" class="btn btn-outline-primary mt-auto fw-bold">Comprar - R$ 329,90</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. FORMULÁRIO COM SELEÇÃO OPTATIVA (HTML PURO + BOOTSTRAP) -->
+    <div id="suporte" class="container my-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card bg-black text-light border-secondary shadow-lg">
+                    <div class="card-body p-5">
+                        <h3 class="fw-bold text-primary mb-4">Solicitar Suporte Técnico</h3>
+                        
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="nomeCliente" class="form-label fw-bold">Nome Completo</label>
+                                <input type="text" class="form-control bg-dark text-light border-secondary" id="nomeCliente" placeholder="Digite seu nome" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="tipoEquipamento" class="form-label fw-bold">Tipo de Equipamento</label>
+                                <select class="form-select bg-dark text-light border-secondary" id="tipoEquipamento" required>
+                                    <option value="" selected disabled>Selecione seu equipamento...</option>
+                                    <option value="desktop">PC Desktop Gamer</option>
+                                    <option value="notebook">Notebook (ex: Acer Nitro V15)</option>
+                                    <option value="periferico">Periférico (Mouse/Teclado)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-bold d-block">Serviços Desejados (Selecione as opções desejadas):</label>
+                                
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="servicoLimpeza" name="servicos[]" value="limpeza">
+                                    <label class="form-check-label" for="servicoLimpeza">
+                                        Limpeza Interna e Troca de Pasta Térmica
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="servicoUpgrade" name="servicos[]" value="upgrade">
+                                    <label class="form-check-label" for="servicoUpgrade">
+                                        Upgrade de Memória RAM ou SSD
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="servicoFormatacao" name="servicos[]" value="formatacao">
+                                    <label class="form-check-label" for="servicoFormatacao">
+                                        Formatação e Otimização para Jogos
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="servicoDiagnostico" name="servicos[]" value="diagnostico">
+                                    <label class="form-check-label" for="servicoDiagnostico">
+                                        Diagnóstico de Peça com Defeito
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="problemaCliente" class="form-label fw-bold">Detalhes Adicionais</label>
+                                <textarea class="form-control bg-dark text-light border-secondary" id="problemaCliente" rows="3" placeholder="Descreva brevemente o que está acontecendo..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">Solicitar Orçamento</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DO BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

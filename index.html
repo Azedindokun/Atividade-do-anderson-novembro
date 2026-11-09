@@ -136,7 +136,7 @@
         </div>
     </div>
 
-    <!-- 5. FORMULÁRIO COM SELEÇÃO OPTATIVA (HTML PURO + BOOTSTRAP) -->
+ <!-- 5. FORMULÁRIO DE SUPORTE COM INTERAÇÃO -->
     <div id="suporte" class="container my-5 pb-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -144,7 +144,13 @@
                     <div class="card-body p-5">
                         <h3 class="fw-bold text-primary mb-4">Solicitar Suporte Técnico</h3>
                         
-                        <form action="#" method="POST">
+                        <!-- Mensagem de Sucesso (Inicia escondida com d-none) -->
+                        <div id="mensagemSucesso" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                            <strong>Solicitação enviada com sucesso!</strong> A equipe da Larptech entrará em contato em breve.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+                        </div>
+
+                        <form id="formSuporte">
                             <div class="mb-3">
                                 <label for="nomeCliente" class="form-label fw-bold">Nome Completo</label>
                                 <input type="text" class="form-control bg-dark text-light border-secondary" id="nomeCliente" placeholder="Digite seu nome" required>
@@ -197,15 +203,31 @@
                                 <textarea class="form-control bg-dark text-light border-secondary" id="problemaCliente" rows="3" placeholder="Descreva brevemente o que está acontecendo..."></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">Solicitar Orçamento</button>
+                            <button type="submit" id="btnEnviar" class="btn btn-primary btn-lg w-100 fw-bold">Solicitar Orçamento</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   
+    <script>
+        const formulario = document.getElementById('formSuporte');
+        const mensagemSucesso = document.getElementById('mensagemSucesso');
 
-    <!-- JAVASCRIPT DO BOOTSTRAP -->
+        formulario.addEventListener('submit', function(evento) {
+
+            evento.preventDefault(); 
+            
+
+            mensagemSucesso.classList.remove('d-none');
+            
+            
+            formulario.reset();
+        });
+    </script>
+</body>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
